@@ -40,7 +40,9 @@ button {
   background-color: transparent;
 }
 .button__content {
+  border-radius: 10px;
   border-radius: var(--border-rds);
+  -webkit-border-radius: var(--border-rds);
   padding: 0.8em;
   position: relative;
   overflow: hidden;
