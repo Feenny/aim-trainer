@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;400;700&display=swap");
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 :root {
@@ -56,6 +57,7 @@ button {
   position: absolute;
   inset: 0;
   margin: auto;
+  -webkit-filter: blur(14px);
   filter: blur(14px);
 }
 .button__text {
@@ -64,6 +66,8 @@ button {
 }
 .button__shape-1 {
   background-color: var(--first-color);
+  -webkit-transform: translate(-48px, -16px);
+  -ms-transform: translate(-48px, -16px);
   transform: translate(-48px, -16px);
   animation: shape-1 7s 1s ease-out infinite;
   -webkit-animation: shape-1 7s 1s ease-out infinite;
@@ -71,18 +75,24 @@ button {
 .button__shape-2 {
   z-index: 3;
   background-color: var(--second-color);
+  -webkit-transform: translate(-12px, 16px);
+  -ms-transform: translate(-12px, 16px);
   transform: translate(-12px, 16px);
   animation: shape-2 6s 1s ease-in infinite;
   -webkit-animation: shape-2 6s 1s ease-in infinite;
 }
 .button__shape-3 {
   background-color: var(--third-color);
+  -webkit-transform: translate(20px, -16px);
+  -ms-transform: translate(20px, -16px);
   transform: translate(20px, -16px);
   animation: shape-3 5s 1s ease-out infinite;
   -webkit-animation: shape-3 5s 1s ease-out infinite;
 }
 .button__shape-4 {
   background-color: var(--fourth-color);
+  -webkit-transform: translate(48px, 16px);
+  -ms-transform: translate(48px, 16px);
   transform: translate(48px, 16px);
   animation: shape-4 8s 1s ease-in infinite;
   -webkit-animation: shape-4 8s 1s ease-in infinite;
@@ -93,6 +103,14 @@ button {
 .button__shadow {
   width: 90%;
   height: 1.2rem;
+
+  background: -o-linear-gradient(
+    left,
+    var(--first-color) 10%,
+    var(--second-color) 30%,
+    var(--third-color) 60%,
+    var(--fourth-color) 90%
+  );
   background: linear-gradient(
     90deg,
     var(--first-color) 10%,
@@ -107,8 +125,11 @@ button {
   margin: 0 auto;
   bottom: -4px;
   z-index: 1;
+  -webkit-filter: blur(11px);
   filter: blur(11px);
   opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
@@ -116,23 +137,52 @@ button {
   opacity: 0.7;
 }
 
+@-webkit-keyframes shape-1 {
+  33% {
+    -webkit-transform: translate(-28px, 0);
+    transform: translate(-28px, 0);
+  }
+}
+
 @keyframes shape-1 {
   33% {
+    -webkit-transform: translate(-28px, 0);
     transform: translate(-28px, 0);
+  }
+}
+@-webkit-keyframes shape-2 {
+  33% {
+    -webkit-transform: translate(-28px, 28px);
+    transform: translate(-28px, 28px);
   }
 }
 @keyframes shape-2 {
   33% {
+    -webkit-transform: translate(-28px, 28px);
     transform: translate(-28px, 28px);
+  }
+}
+@-webkit-keyframes shape-3 {
+  33% {
+    -webkit-transform: translate(20px, 4px);
+    transform: translate(20px, 4px);
   }
 }
 @keyframes shape-3 {
   33% {
+    -webkit-transform: translate(20px, 4px);
     transform: translate(20px, 4px);
+  }
+}
+@-webkit-keyframes shape-4 {
+  33% {
+    -webkit-transform: translate(48px, 0);
+    transform: translate(48px, 0);
   }
 }
 @keyframes shape-4 {
   33% {
+    -webkit-transform: translate(48px, 0);
     transform: translate(48px, 0);
   }
 }
@@ -143,13 +193,25 @@ h1 {
 }
 
 .screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  -webkit-transition: margin 0.5s ease-out;
+  -o-transition: margin 0.5s ease-out;
   transition: margin 0.5s ease-out;
+  background: -o-linear-gradient(left, #1b1c1d 0%, #000000 100%);
   background: linear-gradient(90deg, #1b1c1d 0%, #000000 100%);
   z-index: -2;
 }
@@ -159,8 +221,13 @@ h1 {
 }
 
 .time-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   list-style: none;
   padding: 0;
@@ -190,6 +257,13 @@ h1 {
   opacity: 0;
 }
 .primary {
+  background: -o-linear-gradient(
+    45deg,
+    var(--first-color) 15%,
+    var(--second-color) 35%,
+    var(--third-color) 55%,
+    var(--fourth-color) 95%
+  );
   background: linear-gradient(
     45deg,
     var(--first-color) 15%,
@@ -208,13 +282,20 @@ h1 {
   max-width: 100%;
 }
 .board {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
   max-width: 100%;
   width: 500px;
   height: 500px;
+  background: -o-linear-gradient(331.62deg, #484d5394 -4.6%, #030303d5 200.44%);
   background: linear-gradient(118.38deg, #484d5394 -4.6%, #030303d5 200.44%);
   border-radius: var(--border-rds);
   overflow: hidden;
