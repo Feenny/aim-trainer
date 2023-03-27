@@ -47,6 +47,7 @@ button {
   padding: 0.8em;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 /* shapes */
 .button__content div {
