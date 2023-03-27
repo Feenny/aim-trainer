@@ -197,12 +197,16 @@ h1 {
   -webkit-text-fill-color: transparent;
   color: #16d9e3;
 }
-
+.board-wrapper {
+  padding: 10px;
+  max-width: 100%;
+}
 .board {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  max-width: 100%;
   width: 500px;
   height: 500px;
   background: linear-gradient(118.38deg, #484d5394 -4.6%, #030303d5 200.44%);
