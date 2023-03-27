@@ -226,3 +226,21 @@ h1 {
   font-size: 1.5em;
   font-weight: 400;
 }
+
+@media (max-width: 500px) {
+  .board-wrapper {
+    max-height: 60%;
+  }
+  .board {
+    max-height: 100%;
+  }
+  .menu {
+    margin: 0 0.4em;
+  }
+  h3.timer {
+    margin: 1em 0;
+  }
+  .button-wrapper {
+    margin: 2em 0;
+  }
+}
