@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Aim Training</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Aim Training</h1>
+      <a href="#" class="start button" id="start">
+        <div class="button__content">
+          <span class="button__text">Начать игру</span>
+          <div class="button__shape-1 shape"></div>
+          <div class="button__shape-2 shape"></div>
+          <div class="button__shape-3 shape"></div>
+          <div class="button__shape-4 shape"></div>
+        </div>
+        <div class="button__shadow"></div>
+      </a>
+    </div>
+
+    <div class="screen">
+      <h1>Выберите время</h1>
+      <ul class="time-list" id="time-list">
+        <li>
+          <button class="time-btn" data-time="10">10 сек</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="20">20 сек</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="30">30 сек</button>
+        </li>
+        <li>
+          <button class="time-btn" data-time="60">60 сек</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="screen">
+      <h3 class="timer">Осталось <span id="time">00:00</span></h3>
+      <div class="board" id="board"></div>
+      <div class="button-wrapper">
+        <button class="menu button" id="restart-btn">
+          <div class="button__content">
+            <span class="button__text">Новая игра</span>
+            <div class="button__shape-1 shape"></div>
+            <div class="button__shape-2 shape"></div>
+            <div class="button__shape-3 shape"></div>
+            <div class="button__shape-4 shape"></div>
+          </div>
+          <div class="button__shadow"></div>
+        </button>
+        <button class="menu button" id="finish-btn">
+          <div class="button__content">
+            <span class="button__text">Завершить</span>
+            <div class="button__shape-1 shape"></div>
+            <div class="button__shape-2 shape"></div>
+            <div class="button__shape-3 shape"></div>
+            <div class="button__shape-4 shape"></div>
+          </div>
+          <div class="button__shadow"></div>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
